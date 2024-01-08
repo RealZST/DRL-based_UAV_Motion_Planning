@@ -9,8 +9,7 @@ Python 3.8
 
 # Installation
 
-This project is based on the open-source project [Prometheus](https://github.com/amov-lab/Prometheus).  
-To install it, please follow the instructions in [Prometheus wiki](https://github.com/amov-lab/Prometheus/wiki).
+This project is based on the open-source project [Prometheus](https://github.com/amov-lab/Prometheus). To install it, please follow the instructions in [Prometheus wiki](https://github.com/amov-lab/Prometheus/wiki).
 
 Notice:  
 the guide [Installation and Compilation](https://github.com/amov-lab/Prometheus/wiki/%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E8%AF%91) here recommends installing Ubuntu 18.04 and ROS Melodic. However, Ubuntu 20.04 and ROS Noetic are also compatible. To use them, you may need to make modifications in the following places.  
