@@ -13,7 +13,7 @@
 	<!-- 参看 ~/prometheus_px4/ROMFS/px4fmu_common/init.d-posix/rcS 中的修改内容 -->
     <env name="PX4_ESTIMATOR" value="ekf2_vision" />
 	<!-- 仿真速度因子 1.0代表与真实时间同步，大于1加快仿真速度，小于1则减慢 （电脑性能较差，可选择减小该参数）-->
-	<env name="PX4_SIM_SPEED_FACTOR" value="1.0" />
+	<env name="PX4_SIM_SPEED_FACTOR" value="10.0" />
 	
 	<!-- PX4 configs -->
     <arg name="interactive" default="true"/>
