@@ -15,7 +15,7 @@ from td3 import TD3Agent
 from gazebo_env import envmodel
 
 '''''''''''setting before running'''''''''''
-ON_TRAIN = 0  # train or not. if train, world in sitl.launch is 'train_env'
+ON_TRAIN = 1  # train or not. if train, world in sitl.launch is 'train_env'
 aDRL_TEST = 1  # test DGlobal or not
 oDRL_TEST = 0  # test TD3 or not
 test_env = 'Env2'  # consistent with the world setting in sitl.launch(test_env1,test_env2...)
