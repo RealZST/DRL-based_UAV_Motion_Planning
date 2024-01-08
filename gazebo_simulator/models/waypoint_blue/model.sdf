@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='waypoint'>
+    <link name='link'>
+      <inertial>
+        <mass>0.1</mass>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <gravity>0</gravity>
+      <visual name='visual'>
+        <geometry>
+          <cylinder>
+            <radius>0.7</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <shader type='pixel'/>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <transparency>0.8</transparency>
+        <cast_shadows>1</cast_shadows>
+      </visual>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

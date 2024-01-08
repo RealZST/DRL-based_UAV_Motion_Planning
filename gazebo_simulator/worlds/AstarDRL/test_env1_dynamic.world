@@ -1,0 +1,406 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+   <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 100 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.9 0.9 0.9 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0.2 0.2 -0.9</direction>
+    </light>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- 初始视角 -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-13.0 0.0 12.0 0 0.75 0.0</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+    <!-- 地面 -->
+    <physics type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>1000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>  <!-- 0.004 -->
+      <real_time_factor>1000.0</real_time_factor>  <!-- 1000.0 -->
+      <real_time_update_rate>250</real_time_update_rate>  <!-- 250 -->
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+
+    <model name='start_point'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://start_sphere</uri>
+      </include> 
+    </model>
+    <model name='goal_point'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_sphere</uri>
+      </include> 
+    </model>
+    
+    <model name='obs1'>
+      <pose> -35.646200 -4.670380 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs2'>
+     <pose> -35.646200 6.069430 1 0 0 0 </pose>
+     <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs3'>
+     <pose> -30.808000 1.702810 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs4'>
+     <pose> -28.000000 -4.000000 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs5'>
+      <pose> -22.664400 1.230890 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs6'>
+      <pose> -19.950200 -5.614230 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs7'>
+      <pose> -14.000000 5.000000 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs8'>
+      <pose> -10.000000 -5.000000 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs9'>
+      <pose> -5.000000 -1.000000 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs10'>
+      <pose> -3.825323 -7.394804 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs11'>
+      <pose> -3.153527 5.221098 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs12'>
+     <pose> 1.301852 6.314189 1 0 0 0 </pose>
+     <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs13'>
+     <pose> 2.130947 2.130947 1 0 0 0 </pose>
+     <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs14'>
+     <pose> 7.748865 -0.874757 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs15'>
+     <pose> 15.000000 -5.500590 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs16'>
+      <pose> 17.792978 4.348225 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs17'>
+      <pose> 25.740013 6.146459 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs18'>
+      <pose> 26.309447 -6.035352 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs19'>
+      <pose> 20.597746 -0.537453 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs20'>
+      <pose> 32.552760 1.959567 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_cylinder</uri>
+      </include> 
+    </model>
+
+    <model name='obs21'>
+      <pose> -27.260089 5.883774 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs22'>
+      <pose> -15.411307 0.266554 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs23'>
+      <pose> -0.689158 -2.001860 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs24'>
+      <pose> 2.998025 -6.730578 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs25'>
+      <pose> 6.179663 4.479759 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs26'>
+      <pose> 12.328382 3.669601 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs27'>
+      <pose> 19.558943 -6.555573 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs28'>
+      <pose> 22.505123 3.864954 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs29'>
+      <pose> -7.067982 -0.907535 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+    <model name='obs30'>
+      <pose> 27.105181 -1.334347 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_box</uri>
+      </include> 
+    </model>
+
+    <model name='waypoint0'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+   <model name='waypoint1'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint2'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint3'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint4'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint5'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint6'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint7'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint8'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint9'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint10'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint11'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model> 
+    <model name='waypoint12'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint13'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint14'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint15'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint16'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint17'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint18'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint19'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint20'>
+      <pose> -60 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+
+    <model name='wall1'>
+      <!-- 之前设置为0 -10 1 0 0 0 -->
+      <pose> 0 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall</uri>
+      </include> 
+    </model>
+    <model name='wall2'>
+      <!-- 之前设置为0 10 1 0 0 0 -->
+      <pose> 0 10 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall</uri>
+      </include> 
+    </model>
+    <model name='wall3'>
+      <!-- 之前设置为-15 0 1 0 0 0 -->
+      <pose> -50 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall_x</uri>
+      </include> 
+    </model>
+    <model name='wall4'>
+      <!-- 之前设置为15 0 1 0 0 0 -->
+      <pose> 50 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall_x</uri>
+      </include> 
+    </model>
+
+  </world>
+</sdf>

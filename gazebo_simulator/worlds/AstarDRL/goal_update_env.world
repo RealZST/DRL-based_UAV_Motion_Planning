@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+   <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 100 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.9 0.9 0.9 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0.2 0.2 -0.9</direction>
+    </light>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- 初始视角 -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-13.0 0.0 12.0 0 0.75 0.0</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+    <!-- 地面 -->
+    <physics type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>1000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>  <!-- 0.004 -->
+      <real_time_factor>1000.0</real_time_factor>  <!-- 1000.0 -->
+      <real_time_update_rate>250</real_time_update_rate>  <!-- 250 -->
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+
+    <model name='start_point'>
+      <pose> -10 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://start_sphere</uri>
+      </include> 
+    </model>
+    <model name='goal_point'>
+      <pose> 10 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_sphere</uri>
+      </include> 
+    </model>
+    
+    <model name='obs0'>
+      <pose> 7.769422 0.034320 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_cylinder</uri>
+      </include> 
+    </model>
+    <model name='obs1'>
+      <pose> 2.178836 -0.030191 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_cylinder</uri>
+      </include> 
+    </model>
+    
+    <model name='waypoint-1'>
+      <pose> 2.905153 0.027130 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint0'>
+      <pose> -20 -4 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+   <model name='waypoint1'>
+      <pose> -0.023526 -6.831625 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint_blue</uri>
+      </include> 
+    </model>
+    <model name='waypoint2'>
+      <pose> 4.389105 -6.950821 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint_blue</uri>
+      </include> 
+    </model>
+    <model name='waypoint3'>
+      <pose> -20 -4 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint4'>
+      <pose> -20 -2 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint5'>
+      <pose> -20 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint6'>
+      <pose> -20 2 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint7'>
+      <pose> -20 4 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint8'>
+      <pose> -20 6 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint9'>
+      <pose> -20 8 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model>
+    <model name='waypoint10'>
+      <pose> -20 10 1 0 0 0 </pose>
+      <include>
+        <uri>model://waypoint</uri>
+      </include> 
+    </model> 
+
+    <model name='wall1'>
+      <pose> 0 -10 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall</uri>
+      </include> 
+    </model>
+    <model name='wall2'>
+      <pose> 0 10 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall</uri>
+      </include> 
+    </model>
+    <model name='wall3'>
+      <pose> -15 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall_x</uri>
+      </include> 
+    </model>
+    <model name='wall4'>
+      <pose> 15 0 1 0 0 0 </pose>
+      <include>
+        <uri>model://obs_wall_x</uri>
+      </include> 
+    </model>
+    <model name='wall5'>
+      <pose> 3 3.5 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_wall_h</uri>
+      </include> 
+    </model>
+    <model name='wall6'>
+      <pose> 3 -3.5 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_wall_h</uri>
+      </include> 
+    </model>
+    <model name='wall7'>
+      <pose> 2 6 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_wall_s</uri>
+      </include> 
+    </model>
+    <model name='wall8'>
+      <pose> 2 -6 1 0 0 0 </pose>
+      <include>
+        <uri>model://goal_update/obs_wall_s</uri>
+      </include> 
+    </model>
+
+  </world>
+</sdf>

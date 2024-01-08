@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name="obs_wall_x">
+    <pose frame=''>0 0 0 0 -0 0</pose>
+    <static>true</static>
+    <link name="wall_link">
+        <inertial>
+          <mass>100</mass>
+        </inertial>
+        <collision name="my_collision">
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <!-- 之前设置为0.15 20 2 -->
+              <size>0.15 20 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="my_visual">
+          <geometry>
+            <box>
+              <!-- 之前设置为0.15 20 2 -->
+              <size>0.15 20 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Gray</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <transparency>0.8</transparency>
+        </visual>
+    </link>
+  </model>
+</sdf>
