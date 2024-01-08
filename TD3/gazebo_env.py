@@ -23,7 +23,7 @@ from sensor_msgs.msg import LaserScan
 from points_pos import points_pos
 
 points = points_pos()
-MAX_X = 95  # 25  # Maximum distance in the x-direction between the drone and the goal 
+MAX_X = 25  # 95  # Maximum distance in the x-direction between the drone and the goal 
 MAX_Y = 20  # 20
 MAXDIS = math.sqrt(MAX_X**2 + MAX_Y**2)  # maximum distance to the goal, used for normalization
 MAXLASERDIS = 5.0
@@ -80,7 +80,7 @@ class envmodel:
         self.model_states = msg
     
     def reset(self):
-        if self.aDRL_TEST or self.oDRL_TEST:  # test of TD3 or DGlobal
+        if self.aDRL_TEST or self.oDRL_TEST:  # test DGlobal or TD3
             self.path_rdp = points.rdp_path(self.test_env)
             start_point = self.path_rdp[0]
             goal_point = self.path_rdp[-1]
@@ -143,7 +143,7 @@ class envmodel:
                     self.state.pose.position.z = self.path_rdp[k][2]
                     self.set_state_service(self.state)
 
-        else:  # training DGlobal
+        else:  # training
             start_point, goal_point = points.waypoints_ori()
             self.goal = goal_point
             obs_pos = points.obspoints_ori(obs_n, obs_r)
