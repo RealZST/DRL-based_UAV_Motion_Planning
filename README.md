@@ -13,7 +13,7 @@ This project is based on the open-source project [Prometheus](https://github.com
 To install it, please follow the instructions in [Prometheus wiki](https://github.com/amov-lab/Prometheus/wiki).
 
 Notice:  
-the guide [Installation and Compilation](https://github.com/amov-lab/Prometheus/wiki/%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E8%AF%91) here recommends installing Ubuntu 18.04 and ROS Melodic. However, Ubuntu 20.04 and ROS Noetic are also compatible. To use them, you may need to make modifications in the following two places.  
+the guide [Installation and Compilation](https://github.com/amov-lab/Prometheus/wiki/%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E8%AF%91) here recommends installing Ubuntu 18.04 and ROS Melodic. However, Ubuntu 20.04 and ROS Noetic are also compatible. To use them, you may need to make modifications in the following places.  
 <img src=https://github.com/RealZST/DRL-based_UAV_Motion_Planning/assets/53246001/ed7125ed-2a6b-4be0-a4e9-9e9fdd234823 width=48% />
 <img src=https://github.com/RealZST/DRL-based_UAV_Motion_Planning/assets/53246001/0c74a8f5-64a7-42a9-a809-fc5b4ba6840e width=48% />
 <img src=https://github.com/RealZST/DRL-based_UAV_Motion_Planning/assets/53246001/d49fd607-5fb3-4443-a0f2-8541e74f0cfd width=48% />
@@ -26,3 +26,5 @@ During the DRL training process, resetting the drone's position at the beginning
 I have made revisions to several files (such as sitl.launch, models, worlds, etc.) in [gazebo_simulator](https://github.com/amov-lab/Prometheus/tree/main/Simulator/gazebo_simulator) to accommodate DRL training. `gazebo_simulator` that I used has been uploaded here for your reference.
 
 # How to run
+* Run the command in the terminal `roslaunch prometheus_gazebo sitl.launch`
+* Run train.py
