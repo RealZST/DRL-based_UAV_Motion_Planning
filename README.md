@@ -26,5 +26,6 @@ During the DRL training process, resetting the drone's position at the beginning
 I have made revisions to several files (such as sitl.launch, models, worlds, etc.) in [gazebo_simulator](https://github.com/amov-lab/Prometheus/tree/main/Simulator/gazebo_simulator) to accommodate DRL training. `gazebo_simulator` that I used has been uploaded here for your reference.
 
 # How to run
+reference: [Gazebo simulation run test](https://github.com/amov-lab/Prometheus/wiki/%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE#gazebo%E4%BB%BF%E7%9C%9F%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95)
 * Run the command in the terminal `roslaunch prometheus_gazebo sitl.launch`
 * Run train.py
