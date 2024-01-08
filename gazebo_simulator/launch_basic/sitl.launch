@@ -31,7 +31,7 @@
     <arg name="verbose" default="false"/>
     <arg name="paused" default="false"/>
     <arg name="respawn_gazebo" default="false"/>
-	<arg name="world" default="$(find prometheus_gazebo)/worlds/AstarDRL/goal_update_env.world"/>
+	<arg name="world" default="$(find prometheus_gazebo)/worlds/AstarDRL/train_env.world"/>
     <!-- Gazebo sim -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="gui" value="$(arg gui)"/>
