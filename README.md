@@ -1,5 +1,5 @@
 # DRL-based_UAV_Motion_Planning
-code for `[A Hybrid Human-in-the-Loop Deep Reinforcement Learning Method for UAV Motion Planning](https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0,5&q=A+Hybrid+Human-in-the-Loop+Deep+Reinforcement+Learning+Method+for+UAV+Motion+Planning+for+Long+Trajectories+with+Unpredictable+Obstacles&btnG=)'
+code for `A Hybrid Human-in-the-Loop Deep Reinforcement Learning Method for UAV Motion Planning' [Google Scholar](https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0,5&q=A+Hybrid+Human-in-the-Loop+Deep+Reinforcement+Learning+Method+for+UAV+Motion+Planning+for+Long+Trajectories+with+Unpredictable+Obstacles&btnG=)
 
 # Dependencies
 Ubuntu 20.04 LTS  
